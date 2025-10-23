@@ -38,7 +38,7 @@ void inseriritemvetor()
   Item novo;
   printf("\n== Inserir no Vetor ==\n");
   printf("Nome: ");
-  scanf(" %29s", novo.nome); // usa width para evitar overflow
+  scanf(" %29s", novo.nome); 
   printf("Tipo: ");
   scanf(" %19s", novo.tipo);
   printf("Quantidade: ");
@@ -48,7 +48,7 @@ void inseriritemvetor()
   printf("Item adicionado ao vetor!\n");
 }
 
-// Remove um item do vetor pelo nome (desloca elementos para preencher)
+// Remove um item do vetor pelo nome 
 void removeritemvetor()
 {
   if (totalvetor == 0)
@@ -174,7 +174,7 @@ void removerItemLista()
 {
   if (mochilaLista == NULL)
   {
-    printf("\nMochila (lista) vazia! Nada para remover.\n");
+    printf("\nMochila vazia (lista)! Nada para remover.\n");
     return;
   }
   char nome[30];
@@ -214,7 +214,7 @@ void listarItensLista()
 {
   if (mochilaLista == NULL)
   {
-    printf("\nMochila (lista) vazia.\n");
+    printf("\nMochila vazia(lista).\n");
     return;
   }
   printf("\n=== Itens na Mochila (Lista Encadeada) ===\n");
@@ -234,7 +234,7 @@ void buscarItemLista()
 {
   if (mochilaLista == NULL)
   {
-    printf("\nMochila (lista) vazia. Nada para buscar.\n");
+    printf("\nMochila vazia (lista).\n");
     return;
   }
   char nome[30];
@@ -280,7 +280,7 @@ int main()
 
   do
   {
-    printf("\n=== Sistema de Inventário (Nível Aventureiro) ===\n");
+    printf("\n------Sistema de Inventário--------\n");
     printf("Escolha a estrutura para operar:\n");
     printf("1 - Vetor (lista sequencial)\n");
     printf("2 - Lista encadeada\n");
@@ -292,7 +292,7 @@ int main()
     {
       do
       {
-        printf("\n--- Menu: Vetor ---\n");
+        printf("\n--- Menu Vetor ---\n");
         printf("1 - Inserir item\n");
         printf("2 - Remover item\n");
         printf("3 - Listar itens\n");
@@ -322,7 +322,7 @@ int main()
         case 0:
           break;
         default:
-          printf("Opção inválida. Tente novamente.\n");
+          printf("Opção inválida.\n");
         }
       } while (opcao != 0);
     }
@@ -330,7 +330,7 @@ int main()
     {
       do
       {
-        printf("\n--- Menu: Lista Encadeada ---\n");
+        printf("\nMenu: Lista Encadeada\n");
         printf("1 - Inserir item\n");
         printf("2 - Remover item\n");
         printf("3 - Listar itens\n");
@@ -356,19 +356,19 @@ int main()
         case 0:
           break;
         default:
-          printf("Opção inválida. Tente novamente.\n");
+          printf("Opção inválida.\n");
         }
       } while (opcao != 0);
     }
     else if (estrutura != 0)
     {
-      printf("Escolha inválida. Digite 1, 2 ou 0.\n");
+      printf("Escolha inválida. Digite 1, 2, 0.\n");
     }
 
   } while (estrutura != 0);
 
   // libera memória 
   liberarLista();
-  printf("\nEncerrando. Até a próxima!\n");
+  printf("\nEncerrando.\n");
   return 0;
 }
